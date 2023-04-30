@@ -1,0 +1,106 @@
+body {
+    width: 99%;
+}
+h1 {
+text-align:center;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.block {
+    width: 50%;
+    
+    height:450px;
+    padding: 20px;
+    box-sizing: border-box;
+    border:solid;
+    border-color: RED;
+   
+}
+
+.block h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.block h2 span {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
+    margin-right: 10px;
+}
+
+.block ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.block li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: #000000;
+    font-weight: bold;
+    
+}
+
+.block li span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.block li span::before {
+    content: "\2022";
+    margin-right: 5px;
+}
+.block li:nth-of-type(even) {
+    color: red;
+}
+
+@media (max-width: 992px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .block {
+        width: 50%;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    .block {
+        width: 100%;
+    }
+}
+h2 span {
+    border: 3px solid red;
+    border-radius: 50%;
+    width: 1.2em;
+    height: 1.2em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.block li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.block li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+}
